@@ -19,6 +19,13 @@ body{
 .navbar{
     background-color: #2b356d00;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color:#d8dbe7;
+}
+.navbar-dark .navbar-toggler {
+    color:#d8dbe7;
+    border-color:#d8dbe7;
+}
 .nav-link:hover{
     text-decoration: underline;
 }
@@ -36,6 +43,11 @@ body{
     animation-direction: alternate;
     animation-iteration-count: 2;
     margin-bottom: 0;
+}
+@media (max-width: 320px){
+    .titulo{
+        font-size: 80px;
+    }
 }
 /*---Jumbotron presentación---*/
 .jumbotron{
@@ -68,9 +80,10 @@ body{
         background-position: right;
     }
 }
-/*---Clases Particulares---*/
+/*---Sección Clases Particulares---*/
 .carousel-inner {
     height: 600px;
+    padding-top: 20px;
 }
 .carousel-caption{
     top: 0;
@@ -80,6 +93,13 @@ h2{
     text-decoration: underline;
     margin-bottom: 50px;
     margin-top: 50px;
+}
+.imagenClases{
+    transition: all 2s;
+}
+.imagenClases:hover{
+    filter:opacity(50%);
+    box-shadow: 0px 0px 10px 10px #d8dbe7;
 }
 /*---Sección ¿Quiénes Somos?---*/
 .seccionQuienesSomos{
@@ -110,6 +130,12 @@ h2{
     -webkit-transform-style: preserve-3d;
     transform: rotateY(180deg);
     transform-style: preserve-3d;
+}
+@media (max-width: 400px){
+    .fotoPerfil{
+        width: 150px;
+        border-radius: 100px;
+    }
 }
 /*---Sección Novedades---*/
 .seccionNovedades{
@@ -151,6 +177,17 @@ h4{
     color: #d8dbe7;
     text-decoration: underline;
 }
+@media (max-width: 575px){
+    .logoPie{
+        width: 25%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .iconoInstagram{
+        width: 15%;
+        padding: 5px;
+    }
+}
 /*---Animaciones---*/
 @keyframes opacidad{
     0%{
@@ -181,9 +218,13 @@ h4{
     color: #192041;
     scroll-behavior: smooth;
 }
-/* ---Págians Secundarias---*/
+/* ---Páginas Secundarias---*/
+/* ---Página ¿Quiénes Somos?---*/
 .trabajoMilagros{
     width: 75%;
+}
+.list-group{
+    opacity: 0.8;
 }
 .trabajoBruno{
     width: 75%;
@@ -207,12 +248,55 @@ h3{
     margin: 0 auto;
 }
 .table{
-    opacity: 0.5;
+    opacity: 0.8;
     width: 50%;
 }
 .textoPresentacion{
     text-align: justify;
 }
+/* ---Página Obras---*/
+.contenedorObras{
+    width: 45%;
+    text-align: center;
+    border: solid;
+    border-color: #192041;
+    background-color: black;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.contenedorObras iframe{
+    width: 90%;
+}
+@media (max-width: 768px){
+    .contenedorObras{
+        width: 100%;
+    }
+}
+.mainObras{
+    background-image: url(images/sky.jpg);
+    background-repeat: space repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+/* ---Página Curiosidades---*/
+.contenedorHistoria{
+    width: 75%;
+    border: ridge;
+    border-color: #192041;
+    border-width: 10px;
+    margin-top: 20px;
+    background-color: black;
+}
+.imagenCuriosidades{
+    width: 50%;
+}
+.mainCuriosidades{
+    background-image: url(images/sky.jpg);
+    background-repeat: space repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+/* ---Página Contacto---*/
 .contenedorFormulario{
     width: 30%;
     margin: 0 auto;
@@ -221,4 +305,7 @@ h3{
 }
 .marginCheckbox{
     margin-left: 30px;
+}
+#consulta{
+    width: 100%;
 }
