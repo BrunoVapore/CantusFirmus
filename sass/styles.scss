@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+$color1: #d8dbe7;
+$color2: #192041;
+$color3: #2b356d;
+$color4: black;
+body{
+    font-family: 'Noto Serif', serif;
+    color: $color1;
+    background-color: $color4;
+}
+/*---Header---*/
+.navbar-expand-md{
+    justify-content: center;
+}
+.encabezado{
+    background-color: $color1;
+    background-image: linear-gradient($color2, $color3);
+    height: auto;
+    .navbar{
+        background-color: #2b356d00;
+        .navbar-collapse{
+            flex-grow: 0;
+        }
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        color: $color1;
+    }
+    .navbar-dark .navbar-toggler {
+        color: $color1;
+        border-color: $color1;
+    }
+    .nav-link:hover{
+        text-decoration: underline;
+    }
+    .titulo{
+        position: relative;
+        top: 50px;
+        animation-duration: 2s;
+        animation-name: opacidad;
+        animation-delay: 5s;
+        animation-direction: alternate;
+        animation-iteration-count: 2;
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 768px){
+    .navbar-expand-md{
+        justify-content: space-between;
+    }
+}
+@media (max-width: 320px){
+    .titulo{
+        font-size: 80px;
+    }
+}
+/*---Jumbotron presentación---*/
+.jumbotron{
+    background-image: url(../images/fondoPresentacion.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    .textoIntroduccion{
+        width: 25%;
+        margin-left: 0;
+        text-align: justify;
+        margin-top: 50px;
+    }
+    .contenedorReproductor{
+        margin-left: 25px;
+        .reproductor{
+            margin-top: 30px;
+            opacity: 75%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .jumbotron{
+        background-position: right;
+        .textoIntroduccion{
+            width: 50%;
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+}
+/*---Sección Clases Particulares---*/
+h2{
+    text-decoration: underline;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.carousel-inner {
+    height: 600px;
+    padding-top: 20px;
+    .carousel-caption{
+        top: 0;
+        bottom: auto;
+    }
+    .imagenClases:hover{
+        filter:opacity(50%);
+        box-shadow: 0px 0px 10px 10px #d8dbe7;
+        transition: all 2s;
+    }
+}
+
+/*---Sección ¿Quiénes Somos?---*/
+.seccionQuienesSomos{
+    background-image: url(../images/fondoQuienesSomos.jpg);
+    background-position: center;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+    margin-top: 100px;
+    .tituloQuienesSomos{
+        position: relative;
+        bottom: 40px;
+    }
+    .contenedorFotos{
+        display: flex;
+        justify-content: space-around;
+        .fotoPerfil{
+            width: 200px;
+            border-radius: 150px;
+            opacity: 0.9;
+        }
+        .fotoPerfil:hover{
+            -webkit-transform: rotateY(180deg);
+            -webkit-transform-style: preserve-3d;
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+            transition: all 1.5s;
+        }
+    }
+}
+@media (max-width: 400px){
+    .fotoPerfil{
+        width: 150px;
+        border-radius: 100px;
+    }
+}
+/*---Sección Novedades---*/
+.seccionNovedades{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .card-deck{
+        margin-left: 10px;
+        margin-right: 10px;
+        .card{
+            background-color: $color2;
+            background-image: linear-gradient($color2, $color3);
+            h4{
+                text-decoration: underline;
+            }
+            .card-text{
+                text-align: justify;
+            }
+        }
+    }
+}
+/*---Footer---*/
+.pie{
+    background-color: $color2;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    .linkContacto{
+        color: $color1;
+        font-size: 25px;
+    }
+    .linkContacto:hover{
+        color: $color1;
+        text-decoration: underline;
+    }
+    .logoPie{
+        width: 50%;
+    }
+    .iconoInstagram{
+        width: 25%;
+        padding: 5px;
+    }
+}
+@media (max-width: 575px){
+    .logoPie{
+        width: 25%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .iconoInstagram{
+        width: 15%;
+        padding: 5px;
+    }
+}
+/*---Animaciones---*/
+@keyframes opacidad{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        color: $color2;
+    }
+    100%{
+        opacity: 1;
+        font-size: 170px;
+    }
+}
+/*---Boton subir---*/
+.subir{
+    height: 40px;
+    width: 40px;
+    background-color:#d8dbe7;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 4px solid $color2;
+    box-shadow: 0px 0px 20px $color1;
+    color: $color2;
+    scroll-behavior: smooth;
+}
+.subir:root{
+    scroll-behavior: smooth;
+}
+/* ---Páginas Secundarias---*/
+/* ---Página ¿Quiénes Somos?---*/
+.textoPresentacion{
+    text-align: justify;
+    h3{
+        text-decoration: underline;
+    }
+    .list-group{
+        opacity: 0.8;
+    }
+}
+.trabajoMilagros{
+    width: 75%;
+}
+.contenedorBrunoTrabajo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .trabajoBruno{
+        width: 75%;
+    }
+}
+#cursos{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url(../images/pentagrama_azul.jpg);
+    background-position: center;
+    background-size: 100%;
+    table{
+        margin: 0 auto;
+        opacity: 0.8;
+        width: 50%;
+    }
+}
+/* ---Página Obras---*/
+.mainObras{
+    background-image: url(../images/sky.jpg);
+    background-repeat: space repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    .contenedorObras{
+        width: 45%;
+        text-align: center;
+        border: solid;
+        border-color: $color2;
+        background-color: $color4;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        iframe{
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .contenedorObras{
+        width: 100%;
+    }
+}
+/* ---Página Curiosidades---*/
+.mainCuriosidades{
+    background-image: url(../images/sky.jpg);
+    background-repeat: space repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    .contenedorHistoria{
+        width: 75%;
+        border: ridge;
+        border-color: $color2;
+        border-width: 10px;
+        margin-top: 20px;
+        background-color: $color4;
+        .imagenCuriosidades{
+            width: 50%;
+        }
+    }
+}
+/* ---Página Contacto---*/
+.contenedorFormulario{
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .marginCheckbox{
+        margin-left: 30px;
+    }
+    #consulta{
+        width: 100%;
+    }
+}
+@import "_fonts.scss"
