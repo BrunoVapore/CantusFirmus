@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
 $color1: #d8dbe7;
 $color2: #192041;
 $color3: #2b356d;
 $color4: black;
+
 body{
     font-family: 'Noto Serif', serif;
     color: $color1;
     background-color: $color4;
 }
+
 /*---Header---*/
 .navbar-expand-md{
     justify-content: center;
@@ -161,7 +164,7 @@ h2{
 }
 /*---Footer---*/
 .pie{
-    background-color: $color2;
+    @extend .encabezado;
     padding-top: 50px;
     padding-bottom: 20px;
     .linkContacto{
@@ -277,6 +280,26 @@ h2{
         }
     }
 }
+@mixin fondo($height, $width, $bcolor){
+    height: $height;
+    width: $width;
+    background-color: $bcolor;
+}
+#obras1{
+    @include fondo(auto, 80%, #252f5f);
+}
+#obras2{
+    @include fondo(auto, 40%, #131830);
+}
+#obras3{
+    @include fondo(auto, 40%, #5260a7);
+}
+#obras4{
+    @include fondo(auto, 80%, #252f5f);
+}
+#obras5{
+    @include fondo(auto, 60%, #131830);
+}
 @media (max-width: 768px){
     .contenedorObras{
         width: 100%;
@@ -298,6 +321,16 @@ h2{
         .imagenCuriosidades{
             width: 50%;
         }
+    }
+}
+$publicaciones: (
+    curiosidades1: #7882b3,
+    curiosidades2: #9da9e7,
+    curiosidades3: #b5bff0
+);
+@each $curiosidades, $colores in $publicaciones{
+    .maps-#{$curiosidades} {
+        color: $colores;
     }
 }
 /* ---Página Contacto---*/

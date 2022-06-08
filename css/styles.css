@@ -12,28 +12,28 @@ body {
   justify-content: center;
 }
 
-.encabezado {
+.encabezado, .pie {
   background-color: #d8dbe7;
   background-image: linear-gradient(#192041, #2b356d);
   height: auto;
 }
-.encabezado .navbar {
+.encabezado .navbar, .pie .navbar {
   background-color: rgba(43, 53, 109, 0);
 }
-.encabezado .navbar .navbar-collapse {
+.encabezado .navbar .navbar-collapse, .pie .navbar .navbar-collapse {
   flex-grow: 0;
 }
-.encabezado .navbar-dark .navbar-nav .nav-link {
+.encabezado .navbar-dark .navbar-nav .nav-link, .pie .navbar-dark .navbar-nav .nav-link {
   color: #d8dbe7;
 }
-.encabezado .navbar-dark .navbar-toggler {
+.encabezado .navbar-dark .navbar-toggler, .pie .navbar-dark .navbar-toggler {
   color: #d8dbe7;
   border-color: #d8dbe7;
 }
-.encabezado .nav-link:hover {
+.encabezado .nav-link:hover, .pie .nav-link:hover {
   text-decoration: underline;
 }
-.encabezado .titulo {
+.encabezado .titulo, .pie .titulo {
   position: relative;
   top: 50px;
   animation-duration: 2s;
@@ -166,7 +166,6 @@ h2 {
 
 /*---Footer---*/
 .pie {
-  background-color: #192041;
   padding-top: 50px;
   padding-bottom: 20px;
 }
@@ -290,6 +289,36 @@ h2 {
   width: 90%;
 }
 
+#obras1 {
+  height: auto;
+  width: 80%;
+  background-color: #252f5f;
+}
+
+#obras2 {
+  height: auto;
+  width: 40%;
+  background-color: #131830;
+}
+
+#obras3 {
+  height: auto;
+  width: 40%;
+  background-color: #5260a7;
+}
+
+#obras4 {
+  height: auto;
+  width: 80%;
+  background-color: #252f5f;
+}
+
+#obras5 {
+  height: auto;
+  width: 60%;
+  background-color: #131830;
+}
+
 @media (max-width: 768px) {
   .contenedorObras {
     width: 100%;
@@ -312,6 +341,18 @@ h2 {
 }
 .mainCuriosidades .contenedorHistoria .imagenCuriosidades {
   width: 50%;
+}
+
+.maps-curiosidades1 {
+  color: #7882b3;
+}
+
+.maps-curiosidades2 {
+  color: #9da9e7;
+}
+
+.maps-curiosidades3 {
+  color: #b5bff0;
 }
 
 /* ---Página Contacto---*/
