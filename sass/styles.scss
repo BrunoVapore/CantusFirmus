@@ -258,7 +258,8 @@ h2{
     padding-bottom: 5%;
     background-image: url(../images/pentagrama_azul.jpg);
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     table{
         margin: 0 auto;
         opacity: 0.8;
@@ -290,24 +291,19 @@ h2{
     background-color: $bcolor;
 }
 #obras1{
-    @include fondo(auto, 80%, $color3);
+    @include fondo(auto, 70%, $color3);
 }
 #obras2{
-    @include fondo(auto, 40%, $color2);
+    @include fondo(auto, 80%, $color2);
 }
 #obras3{
-    @include fondo(auto, 40%, $color5);
+    @include fondo(auto, 60%, $color5);
 }
 #obras4{
     @include fondo(auto, 80%, $color3);
 }
 #obras5{
     @include fondo(auto, 60%, $color2);
-}
-@media (max-width: 768px){
-    .contenedorObras{
-        width: 100%;
-    }
 }
 /* ---Página Curiosidades---*/
 .mainCuriosidades{
@@ -335,6 +331,20 @@ $publicaciones: (
 @each $curiosidades, $colores in $publicaciones{
     .maps-#{$curiosidades} {
         color: $colores;
+    }
+}
+/* ---Vista Tablet y Mobile para Página Obras y Curiosidades---*/
+@media (max-width: 768px){
+    .mainObras{
+        background-repeat: no-repeat;
+        background-size: cover;
+        .contenedorObras{
+            width: 100%;
+        }
+    }
+    .mainCuriosidades{
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 /* ---Página Contacto---*/

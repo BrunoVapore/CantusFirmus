@@ -262,7 +262,8 @@ h2 {
   padding-bottom: 5%;
   background-image: url(../images/pentagrama_azul.jpg);
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #cursos table {
   margin: 0 auto;
@@ -292,19 +293,19 @@ h2 {
 
 #obras1 {
   height: auto;
-  width: 80%;
+  width: 70%;
   background-color: #2b356d;
 }
 
 #obras2 {
   height: auto;
-  width: 40%;
+  width: 80%;
   background-color: #192041;
 }
 
 #obras3 {
   height: auto;
-  width: 40%;
+  width: 60%;
   background-color: #1e2a66;
 }
 
@@ -320,11 +321,6 @@ h2 {
   background-color: #192041;
 }
 
-@media (max-width: 768px) {
-  .contenedorObras {
-    width: 100%;
-  }
-}
 /* ---Página Curiosidades---*/
 .mainCuriosidades {
   background-image: url(../images/pentagrama_fondo.jpg);
@@ -356,6 +352,20 @@ h2 {
   color: #d8dbe7;
 }
 
+/* ---Vista Tablet y Mobile para Página Obras y Curiosidades---*/
+@media (max-width: 768px) {
+  .mainObras {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mainObras .contenedorObras {
+    width: 100%;
+  }
+  .mainCuriosidades {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 /* ---Página Contacto---*/
 .contenedorFormulario {
   width: 30%;
