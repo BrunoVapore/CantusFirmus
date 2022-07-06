@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+/*---Paleta de Colores---*/
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Serif&family=Yusei+Magic&display=swap");
 html {
   scroll-behavior: smooth;
@@ -229,7 +230,6 @@ h2 {
   border-radius: 50%;
   border: 4px solid #192041;
   box-shadow: 0px 0px 20px #d8dbe7;
-  color: #192041;
 }
 
 /* ---Páginas Secundarias---*/
@@ -242,6 +242,7 @@ h2 {
 }
 .textoPresentacion .list-group {
   opacity: 0.8;
+  padding: 20px;
 }
 
 .trabajoMilagros {
@@ -268,9 +269,14 @@ h2 {
 #cursos table {
   margin: 0 auto;
   opacity: 0.8;
-  width: 50%;
+  width: 60vw;
 }
 
+@media (max-width: 768px) {
+  #cursos table {
+    width: 80vw;
+  }
+}
 /* ---Página Obras---*/
 .mainObras {
   background-image: url(../images/pentagrama_fondo.jpg);
@@ -279,48 +285,32 @@ h2 {
   background-attachment: fixed;
 }
 .mainObras .contenedorObras {
-  width: 45%;
+  width: 50vw;
+  height: auto;
   text-align: center;
   border: solid;
   border-color: #192041;
   background-color: black;
   margin-left: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
+}
+.mainObras .contenedorObras h3 {
+  text-decoration: underline;
 }
 .mainObras .contenedorObras iframe {
+  padding-top: 25px;
   width: 90%;
 }
 
-#obras1 {
-  height: auto;
-  width: 70%;
-  background-color: #2b356d;
+@media (max-width: 768px) {
+  .mainObras {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mainObras .contenedorObras {
+    width: 90vw;
+  }
 }
-
-#obras2 {
-  height: auto;
-  width: 80%;
-  background-color: #192041;
-}
-
-#obras3 {
-  height: auto;
-  width: 60%;
-  background-color: #1e2a66;
-}
-
-#obras4 {
-  height: auto;
-  width: 80%;
-  background-color: #2b356d;
-}
-
-#obras5 {
-  height: auto;
-  width: 60%;
-  background-color: #192041;
-}
-
 /* ---Página Curiosidades---*/
 .mainCuriosidades {
   background-image: url(../images/pentagrama_fondo.jpg);
@@ -329,15 +319,24 @@ h2 {
   background-attachment: fixed;
 }
 .mainCuriosidades .contenedorHistoria {
-  width: 75%;
+  width: 50vw;
   border: ridge;
   border-color: #192041;
   border-width: 10px;
   margin-top: 20px;
   background-color: black;
 }
+.mainCuriosidades .contenedorHistoria h3 {
+  text-decoration: overline;
+}
 .mainCuriosidades .contenedorHistoria .imagenCuriosidades {
-  width: 50%;
+  width: 25vw;
+  padding-bottom: 20px;
+}
+.mainCuriosidades .contenedorHistoria p {
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: justify;
 }
 
 .maps-curiosidades1 {
@@ -352,23 +351,25 @@ h2 {
   color: #d8dbe7;
 }
 
-/* ---Vista Tablet y Mobile para Página Obras y Curiosidades---*/
 @media (max-width: 768px) {
-  .mainObras {
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .mainObras .contenedorObras {
-    width: 100%;
-  }
   .mainCuriosidades {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .mainCuriosidades .contenedorHistoria {
+    width: 85vw;
+  }
+  .mainCuriosidades .contenedorHistoria .imagenCuriosidades {
+    width: 100%;
+  }
+  .mainCuriosidades .contenedorHistoria p {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 /* ---Página Contacto---*/
 .contenedorFormulario {
-  width: 30%;
+  width: 400px;
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -379,7 +380,20 @@ h2 {
 .contenedorFormulario #consulta {
   width: 100%;
 }
+.contenedorFormulario .btn {
+  background-color: #192041;
+  color: #d8dbe7;
+  margin-top: 10px;
+}
+.contenedorFormulario .btn:hover {
+  background-color: #2b356d;
+}
 
+@media (max-width: 425px) {
+  .contenedorFormulario {
+    width: 85vw;
+  }
+}
 body {
   font-family: "Noto Serif", serif;
 }
